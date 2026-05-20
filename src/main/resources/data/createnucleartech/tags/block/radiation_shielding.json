@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#createnucleartech:lead_radiation_shielding",
+      "required": false
+    },
+    {
+      "id": "#createnucleartech:concrete_radiation_shielding",
+      "required": false
+    },
+    {
+      "id": "#createnucleartech:partial_radiation_shielding",
+      "required": false
+    },
+    {
+      "id": "createnucleartech:lead_irradiation_box",
+      "required": false
+    }
+  ]
+}

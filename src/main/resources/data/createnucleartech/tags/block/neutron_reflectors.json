@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:early_neutron_reflector",
+    "createnucleartech:advanced_neutron_reflector",
+    "createnucleartech:elite_neutron_reflector"
+  ]
+}

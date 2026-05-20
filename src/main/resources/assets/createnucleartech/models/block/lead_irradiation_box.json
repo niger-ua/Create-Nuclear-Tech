@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "createnucleartech:block/lead_irradiation_box"
+  }
+}

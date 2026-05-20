@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    " L ",
+    "GPG",
+    " W "
+  ],
+  "key": {
+    "L": {
+      "item": "tfmg:lead_sheet"
+    },
+    "G": {
+      "item": "chemica:graphite_sheet"
+    },
+    "P": {
+      "item": "createnucleartech:plutonium_239_ingot"
+    },
+    "W": {
+      "item": "createnucleartech:plutonium_240_ingot"
+    }
+  },
+  "result": {
+    "id": "crowns:fuel_rod",
+    "components": {
+      "minecraft:custom_data": {
+        "composition": {
+          "createnucleartech:profile": "reactor_grade_plutonium",
+          "createnucleartech:pu240": 0.28,
+          "crowns:p239": 0.72
+        }
+      }
+    },
+    "count": 8
+  }
+}

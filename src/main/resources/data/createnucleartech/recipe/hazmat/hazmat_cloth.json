@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SWS",
+    "WLW",
+    "SWS"
+  ],
+  "key": {
+    "L": { "item": "minecraft:leather" },
+    "S": { "item": "minecraft:string" },
+    "W": { "tag": "minecraft:wool" }
+  },
+  "result": {
+    "id": "createnucleartech:hazmat_cloth",
+    "count": 4
+  }
+}

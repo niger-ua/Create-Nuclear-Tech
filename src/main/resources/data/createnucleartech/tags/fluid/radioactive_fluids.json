@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "crowns:corium",
+      "required": false
+    },
+    {
+      "id": "crowns:flowing_corium",
+      "required": false
+    },
+    {
+      "id": "crowns:uranium_hexafluoride",
+      "required": false
+    },
+    {
+      "id": "crowns:flowing_uranium_hexafluoride",
+      "required": false
+    }
+  ]
+}

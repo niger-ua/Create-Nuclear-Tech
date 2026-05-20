@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "createnucleartech:advanced_alloy_plate"
+    },
+    {
+      "item": "createnucleartech:cobalt_plate"
+    },
+    {
+      "item": "createnucleartech:reflector_tier_1"
+    }
+  ],
+  "result": {
+    "id": "createnucleartech:mixed_plate",
+    "count": 4
+  }
+}

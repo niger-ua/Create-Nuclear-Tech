@@ -1,0 +1,86 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "tfmg:steel_frame"
+    },
+    "C": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "R": {
+      "item": "tfmg:steel_ingot"
+    },
+    "E": {
+      "item": "tfmg:steel_gearbox"
+    },
+    "Z": {
+      "item": "tfmg:lead_sheet"
+    },
+    "V": {
+      "item": "tfmg:steel_cogwheel"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "H": {
+      "item": "tfmg:heavy_plate"
+    },
+    "G": {
+      "tag": "minecraft:logs"
+    },
+    "S": {
+      "item": "tfmg:cast_iron_sheet"
+    },
+    "M": {
+      "item": "tfmg:steel_mechanism"
+    },
+    "U": {
+      "type": "tacz:nbt",
+      "nbt": {
+        "GunId": "gz:t81s"
+      },
+      "partial": true,
+      "items": "tacz:modern_kinetic_gun"
+    },
+    "B": {
+      "item": "tfmg:steel_pipe"
+    }
+  },
+  "pattern": [
+    "UBBBBBBH ",
+    " RMMASCH ",
+    " GGGGGH  ",
+    " ZZZZL   ",
+    " LVVE    "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:t81lmg"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gold_block",
+    {
+      "id": "tfmg:lead_block",
+      "required": false
+    }
+  ]
+}

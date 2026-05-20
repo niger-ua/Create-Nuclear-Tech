@@ -1,0 +1,53 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/lead",
+      "required": false
+    },
+    {
+      "id": "#c:nuggets/lead",
+      "required": false
+    },
+    {
+      "id": "#c:dusts/lead",
+      "required": false
+    },
+    {
+      "id": "#c:plates/lead",
+      "required": false
+    },
+    {
+      "id": "#c:storage_blocks/lead",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_ingot",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_nugget",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_dust",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_sheet",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_block",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_pipe",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_frame",
+      "required": false
+    }
+  ]
+}

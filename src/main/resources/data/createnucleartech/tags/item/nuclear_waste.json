@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:plutonium_240_ingot",
+    "createnucleartech:cobalt_60_source",
+    "createnucleartech:iridium_192_source",
+    {
+      "id": "#c:dusts/nuclear_waste",
+      "required": false
+    },
+    {
+      "id": "#c:wastes/nuclear",
+      "required": false
+    },
+    {
+      "id": "crowns:solid_corium",
+      "required": false
+    },
+    {
+      "id": "crowns:corium_bucket",
+      "required": false
+    },
+    {
+      "id": "crowns:uranium_hexafluoride_bucket",
+      "required": false
+    }
+  ]
+}

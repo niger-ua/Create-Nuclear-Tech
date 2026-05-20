@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:nickel_dust",
+      "required": false
+    }
+  ]
+}

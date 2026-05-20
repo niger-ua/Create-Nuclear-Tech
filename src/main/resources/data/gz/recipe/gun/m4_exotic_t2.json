@@ -1,0 +1,102 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "Q": {
+      "item": "chemica:tantalum_capacitor_item"
+    },
+    "R": {
+      "item": "tfmg:aluminum_ingot"
+    },
+    "C": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "F": {
+      "item": "chemica:conductive_paste"
+    },
+    "Y": {
+      "item": "chemica:electrochemically_exfoliated_graphene"
+    },
+    "T": {
+      "item": "chemica:tungsten_carbide_ingot"
+    },
+    "Z": {
+      "item": "chemica:chromium_ingot"
+    },
+    "W": {
+      "item": "tfmg:constantan_wire"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "H": {
+      "item": "chemica:titanium_sheet"
+    },
+    "P": {
+      "item": "chemica:platinum_ingot"
+    },
+    "G": {
+      "item": "tfmg:plastic_sheet"
+    },
+    "I": {
+      "item": "chemica:reinforced_iridium_plate"
+    },
+    "S": {
+      "item": "chemica:advanced_circuit_board"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "X": {
+      "item": "chemica:advanced_composite_tough_alloy"
+    },
+    "U": {
+      "type": "tacz:nbt",
+      "nbt": {
+        "GunId": "gz:lvoa_c"
+      },
+      "partial": true,
+      "items": "tacz:modern_kinetic_gun"
+    },
+    "B": {
+      "item": "tfmg:aluminum_pipe"
+    }
+  },
+  "pattern": [
+    "UBBTTTTHH",
+    " RRMMQSCF",
+    "  GGGGZP ",
+    "  AWWAIP ",
+    "  XCYCI  ",
+    "   FPF   "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:m4_exotic_t2"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

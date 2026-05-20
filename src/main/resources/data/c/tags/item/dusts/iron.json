@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:iron_dust",
+      "required": false
+    },
+    {
+      "id": "tfmg:iron_dust",
+      "required": false
+    }
+  ]
+}

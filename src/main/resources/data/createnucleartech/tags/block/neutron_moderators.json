@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coal_block",
+    "minecraft:water",
+    "createnucleartech:early_neutron_reflector"
+  ]
+}

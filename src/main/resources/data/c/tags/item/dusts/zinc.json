@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:zinc_dust",
+      "required": false
+    },
+    {
+      "id": "tfmg:zinc_dust",
+      "required": false
+    }
+  ]
+}

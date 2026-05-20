@@ -1,0 +1,36 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:advanced_alloy_ingot",
+    "createnucleartech:advanced_alloy_plate",
+    {
+      "id": "#c:ingots/composite_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:plates/carbon_fiber",
+      "required": false
+    },
+    {
+      "id": "#c:plates/steel",
+      "required": false
+    },
+    {
+      "id": "chemica:advanced_composite_tough_alloy",
+      "required": false
+    },
+    {
+      "id": "chemica:carbon_fiber_composite_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:reinforced_iridium_plate",
+      "required": false
+    },
+    {
+      "id": "tfmg:heavy_plate",
+      "required": false
+    },
+    "minecraft:netherite_ingot"
+  ]
+}

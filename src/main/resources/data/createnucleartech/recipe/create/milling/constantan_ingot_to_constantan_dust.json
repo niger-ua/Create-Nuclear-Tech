@@ -1,0 +1,24 @@
+{
+  "type": "create:milling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "chemica:constantan_ingot"
+    }
+  ],
+  "processing_time": 100,
+  "results": [
+    {
+      "id": "chemica:constantan_dust"
+    }
+  ]
+}

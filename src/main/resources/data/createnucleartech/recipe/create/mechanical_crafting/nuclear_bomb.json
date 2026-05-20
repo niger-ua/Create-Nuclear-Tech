@@ -1,0 +1,30 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "L": {
+      "item": "tfmg:lead_block"
+    }
+  },
+  "pattern": [
+    "LLILL",
+    "LIIIL",
+    "IIIII",
+    "LIIIL",
+    "LLILL"
+  ],
+  "result": {
+    "id": "createnucleartech:nuclear_bomb"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:storage_blocks/lead",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_block",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_glass",
+      "required": false
+    },
+    {
+      "id": "createnucleartech:lead_irradiation_box",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "createnucleartech:item/bomb_detonator"
+	},
+	"display": {
+		"firstperson_righthand": {
+			"rotation": [-138.21, 79.78, 167.69],
+			"translation": [0, 0, -2.75]
+		}
+	}
+}

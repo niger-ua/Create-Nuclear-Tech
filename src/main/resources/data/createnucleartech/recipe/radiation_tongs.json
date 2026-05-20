@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    " WL",
+    "LT ",
+    "P  "
+  ],
+  "key": {
+    "L": {
+      "item": "tfmg:lead_sheet"
+    },
+    "P": {
+      "item": "chemica:polytetrafluoroethylene_sheet"
+    },
+    "T": {
+      "item": "chemica:titanium_sheet"
+    },
+    "W": {
+      "item": "chemica:tungsten_carbide_ingot"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:radiation_tongs",
+    "count": 1
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:raw_materials/uranium",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/uranium",
+      "required": false
+    },
+    {
+      "id": "#c:nuggets/uranium",
+      "required": false
+    },
+    {
+      "id": "crowns:uranium_ingot",
+      "required": false
+    },
+    {
+      "id": "crowns:raw_uranium",
+      "required": false
+    },
+    {
+      "id": "crowns:natural_uranium_nugget",
+      "required": false
+    },
+    {
+      "id": "crowns:enriched_uranium_ingot",
+      "required": false
+    },
+    {
+      "id": "crowns:enriched_uranium_nugget",
+      "required": false
+    },
+    {
+      "id": "crowns:depleted_uranium_ingot",
+      "required": false
+    },
+    {
+      "id": "crowns:depleted_uranium_nugget",
+      "required": false
+    },
+    "createnucleartech:yellowcake"
+  ]
+}

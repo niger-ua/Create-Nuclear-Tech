@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "createnucleartech:raw_thorium"
+  },
+  "result": {
+    "id": "createnucleartech:thorium_ingot"
+  },
+  "experience": 0.7,
+  "cookingtime": 200
+}

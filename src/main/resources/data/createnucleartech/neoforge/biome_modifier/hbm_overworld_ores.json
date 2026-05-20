@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "createnucleartech:thorium_ore",
+    "createnucleartech:niter_ore",
+    "createnucleartech:beryllium_ore",
+    "createnucleartech:cinnabar_ore"
+  ],
+  "step": "underground_ores"
+}

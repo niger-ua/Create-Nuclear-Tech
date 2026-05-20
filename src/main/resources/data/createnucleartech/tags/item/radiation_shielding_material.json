@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/lead",
+      "required": false
+    },
+    {
+      "id": "#c:plates/lead",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_ingot",
+      "required": false
+    },
+    {
+      "id": "tfmg:lead_sheet",
+      "required": false
+    },
+    "minecraft:iron_ingot",
+    "minecraft:copper_ingot"
+  ]
+}

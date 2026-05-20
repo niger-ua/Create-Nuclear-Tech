@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:thorium_ore",
+    "createnucleartech:deepslate_thorium_ore",
+    "createnucleartech:beryllium_ore",
+    "createnucleartech:deepslate_beryllium_ore",
+    "createnucleartech:cinnabar_ore",
+    "createnucleartech:deepslate_cinnabar_ore"
+  ]
+}

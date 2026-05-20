@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "createnucleartech:block/waste_leaves"
+  }
+}

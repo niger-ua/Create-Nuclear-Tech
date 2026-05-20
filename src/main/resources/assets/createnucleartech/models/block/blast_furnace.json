@@ -1,0 +1,16 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "createnucleartech:block/blast_furnace_side",
+    "front": "createnucleartech:block/blast_furnace_front",
+    "side": "createnucleartech:block/blast_furnace_side",
+    "top": "createnucleartech:block/blast_furnace_top",
+    "bottom": "createnucleartech:block/blast_furnace_bottom",
+    "north": "createnucleartech:block/blast_furnace_front",
+    "south": "createnucleartech:block/blast_furnace_side",
+    "east": "createnucleartech:block/blast_furnace_side",
+    "west": "createnucleartech:block/blast_furnace_side",
+    "up": "createnucleartech:block/blast_furnace_top",
+    "down": "createnucleartech:block/blast_furnace_bottom"
+  }
+}

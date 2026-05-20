@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:plutonium_core",
+    "createnucleartech:plutonium_239_ingot",
+    {
+      "id": "crowns:enriched_uranium_ingot",
+      "required": false
+    },
+    {
+      "id": "crowns:enriched_uranium_nugget",
+      "required": false
+    },
+    {
+      "id": "crowns:fuel_rod",
+      "required": false
+    },
+    {
+      "id": "crowns:fuel_assembly",
+      "required": false
+    },
+    "createnucleartech:natural_uranium_fuel_rod",
+    "createnucleartech:enriched_uranium_fuel_rod",
+    "createnucleartech:military_uranium_fuel_rod",
+    "createnucleartech:mox_fuel_rod",
+    "createnucleartech:plutonium_fuel_rod",
+    "createnucleartech:reactor_plutonium_fuel_rod",
+    "createnucleartech:thorium_fuel_rod",
+    "createnucleartech:spent_fuel_rod"
+  ]
+}

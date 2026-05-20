@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:cobalt_ingot",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/cobalt",
+      "required": false
+    }
+  ]
+}

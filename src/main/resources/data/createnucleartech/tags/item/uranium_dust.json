@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:dusts/uranium",
+      "required": false
+    },
+    {
+      "id": "tfmg:uranium_dust",
+      "required": false
+    },
+    {
+      "id": "chemica:uranium_dust",
+      "required": false
+    }
+  ]
+}

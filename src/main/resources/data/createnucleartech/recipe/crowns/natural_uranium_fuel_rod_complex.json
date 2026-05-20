@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    "LUL",
+    "GUG",
+    "TUT"
+  ],
+  "key": {
+    "L": { "item": "tfmg:lead_sheet" },
+    "G": { "item": "chemica:graphite_sheet" },
+    "T": { "item": "chemica:titanium_sheet" },
+    "U": { "item": "crowns:uranium_ingot" }
+  },
+  "result": {
+    "id": "crowns:fuel_rod",
+    "components": {
+      "minecraft:custom_data": {
+        "composition": {
+          "createnucleartech:profile": "natural_uranium",
+          "crowns:u235": 0.0078125,
+          "crowns:u238": 0.9921875
+        }
+      }
+    },
+    "count": 16
+  }
+}

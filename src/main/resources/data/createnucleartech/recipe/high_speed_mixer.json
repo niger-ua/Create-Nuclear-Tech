@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "AMA",
+    " C "
+  ],
+  "key": {
+    "L": {
+      "item": "tfmg:large_steel_cogwheel"
+    },
+    "A": {
+      "item": "createnucleartech:advanced_alloy_ingot"
+    },
+    "M": {
+      "item": "create:mechanical_mixer"
+    },
+    "C": {
+      "item": "tfmg:steel_casing"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:high_speed_mixer"
+  }
+}

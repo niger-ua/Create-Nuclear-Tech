@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:iridium_ingot",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/iridium",
+      "required": false
+    }
+  ]
+}

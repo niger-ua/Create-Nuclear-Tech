@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "item": "tfmg:limesand"
+    },
+    {
+      "item": "tfmg:limesand"
+    }
+  ],
+  "result": {
+    "id": "createnucleartech:steel_mix"
+  }
+}

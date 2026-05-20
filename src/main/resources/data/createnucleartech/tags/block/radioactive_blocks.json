@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "crowns:solid_corium",
+      "required": false
+    },
+    {
+      "id": "crowns:fuel_assembly",
+      "required": false
+    },
+    "createnucleartech:fuel_holder"
+  ]
+}

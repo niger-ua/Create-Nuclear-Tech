@@ -1,0 +1,99 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "tfmg:steel_frame"
+    },
+    "C": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "R": {
+      "item": "tfmg:steel_casing"
+    },
+    "Q": {
+      "item": "tfmg:coated_circuit_board"
+    },
+    "E": {
+      "item": "tfmg:steel_gearbox"
+    },
+    "F": {
+      "item": "chemica:conductive_paste"
+    },
+    "Z": {
+      "item": "tfmg:lead_sheet"
+    },
+    "T": {
+      "item": "chemica:tungsten_carbide_ingot"
+    },
+    "V": {
+      "item": "tfmg:steel_cogwheel"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "W": {
+      "item": "tfmg:constantan_wire"
+    },
+    "H": {
+      "item": "tfmg:heavy_plate"
+    },
+    "G": {
+      "item": "tfmg:plastic_sheet"
+    },
+    "S": {
+      "item": "chemica:titanium_sheet"
+    },
+    "M": {
+      "item": "create:precision_mechanism"
+    },
+    "U": {
+      "type": "tacz:nbt",
+      "nbt": {
+        "GunId": "gz:tactical_sasg_12k"
+      },
+      "partial": true,
+      "items": "tacz:modern_kinetic_gun"
+    },
+    "B": {
+      "item": "tfmg:steel_pipe"
+    }
+  },
+  "pattern": [
+    "UBBBBBBHH",
+    " RMMASCQ ",
+    " GGGCCHH ",
+    " ZZZZLTT ",
+    " LVVEVL  ",
+    "  FWF    "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:cargo_terminal"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

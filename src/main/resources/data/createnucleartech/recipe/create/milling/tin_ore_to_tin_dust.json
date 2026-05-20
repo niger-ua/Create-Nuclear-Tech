@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "chemica:tin_ore"
+    }
+  ],
+  "processing_time": 180,
+  "results": [
+    {
+      "id": "chemica:tin_dust",
+      "count": 2
+    }
+  ]
+}

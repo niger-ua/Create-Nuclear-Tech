@@ -1,0 +1,29 @@
+{
+  "type": "create:milling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "createnucleartech:deepslate_niter_ore"
+    }
+  ],
+  "processing_time": 140,
+  "results": [
+    {
+      "id": "tfmg:nitrate_dust",
+      "count": 5
+    },
+    {
+      "id": "tfmg:nitrate_dust",
+      "chance": 0.5
+    }
+  ]
+}

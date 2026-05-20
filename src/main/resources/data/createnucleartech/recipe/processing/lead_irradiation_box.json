@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    "ILI",
+    "LGL",
+    "IPI"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "chemica:reinforced_iridium_plate"
+    },
+    "L": {
+      "item": "tfmg:lead_block"
+    },
+    "P": {
+      "item": "chemica:polytetrafluoroethylene_sheet"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:lead_irradiation_box"
+  }
+}

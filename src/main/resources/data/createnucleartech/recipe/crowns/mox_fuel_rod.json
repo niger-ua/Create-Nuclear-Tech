@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    " L ",
+    "GPG",
+    " D "
+  ],
+  "key": {
+    "L": {
+      "item": "tfmg:lead_sheet"
+    },
+    "G": {
+      "item": "chemica:graphite_sheet"
+    },
+    "P": {
+      "item": "createnucleartech:plutonium_239_ingot"
+    },
+    "D": {
+      "item": "crowns:depleted_uranium_ingot"
+    }
+  },
+  "result": {
+    "id": "crowns:fuel_rod",
+    "components": {
+      "minecraft:custom_data": {
+        "composition": {
+          "createnucleartech:profile": "mox",
+          "crowns:p239": 0.25,
+          "crowns:u238": 0.75
+        }
+      }
+    },
+    "count": 8
+  }
+}

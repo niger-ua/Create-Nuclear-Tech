@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/heat_resistant_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:plates/graphite",
+      "required": false
+    },
+    {
+      "id": "chemica:tungsten_ingot",
+      "required": false
+    },
+    {
+      "id": "chemica:graphite_sheet",
+      "required": false
+    },
+    "minecraft:netherite_scrap",
+    "minecraft:blaze_powder"
+  ]
+}

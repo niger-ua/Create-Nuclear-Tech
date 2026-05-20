@@ -1,0 +1,76 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "fuel": "empty"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/empty"
+      }
+    },
+    {
+      "when": {
+        "fuel": "natural_uranium"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/natural_uranium"
+      }
+    },
+    {
+      "when": {
+        "fuel": "enriched_uranium"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/enriched_uranium"
+      }
+    },
+    {
+      "when": {
+        "fuel": "military_uranium"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/military_uranium"
+      }
+    },
+    {
+      "when": {
+        "fuel": "mox"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/mox"
+      }
+    },
+    {
+      "when": {
+        "fuel": "plutonium_239"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/plutonium_239"
+      }
+    },
+    {
+      "when": {
+        "fuel": "reactor_grade_plutonium"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/reactor_grade_plutonium"
+      }
+    },
+    {
+      "when": {
+        "fuel": "thorium"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/thorium"
+      }
+    },
+    {
+      "when": {
+        "fuel": "spent"
+      },
+      "apply": {
+        "model": "createnucleartech:block/fuel_holder/spent"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "createnucleartech:block/charred_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "createnucleartech:block/charred_log"
+    },
+    "axis=z": {
+      "model": "createnucleartech:block/charred_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "c:plates/graphite"
+    },
+    {
+      "item": "chemica:reinforced_iridium_plate"
+    },
+    {
+      "item": "chemica:advanced_composite_tough_alloy"
+    }
+  ],
+  "result": {
+    "id": "createnucleartech:reflector_tier_3",
+    "count": 1
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "Z": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "B": {
+      "item": "tfmg:steel_pipe"
+    },
+    "R": {
+      "item": "tfmg:steel_ingot"
+    },
+    "Q": {
+      "item": "tfmg:circuit_board"
+    },
+    "M": {
+      "item": "tfmg:steel_mechanism"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "H": {
+      "item": "tfmg:nickel_sheet"
+    },
+    "G": {
+      "item": "tfmg:plastic_sheet"
+    },
+    "S": {
+      "item": "tfmg:cast_iron_sheet"
+    }
+  },
+  "pattern": [
+    "BBBBBH",
+    "RMMASC",
+    " GGGQ ",
+    " Z    "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:navy_mp5n"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

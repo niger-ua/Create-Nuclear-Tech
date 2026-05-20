@@ -1,0 +1,65 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "Z": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "minecraft:leather"
+    },
+    "B": {
+      "item": "tfmg:steel_pipe"
+    },
+    "R": {
+      "item": "tfmg:steel_ingot"
+    },
+    "M": {
+      "item": "tfmg:steel_mechanism"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "G": {
+      "tag": "minecraft:logs"
+    },
+    "S": {
+      "item": "tfmg:cast_iron_sheet"
+    }
+  },
+  "pattern": [
+    "BBBBBB",
+    "RMMASC",
+    " GGAG ",
+    "  Z   "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:military_ak74"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

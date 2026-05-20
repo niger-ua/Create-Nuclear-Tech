@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HL",
+    "CP"
+  ],
+  "key": {
+    "H": { "item": "createnucleartech:basic_hazmat_helmet" },
+    "L": { "item": "createnucleartech:basic_hazmat_boots" },
+    "C": { "item": "createnucleartech:basic_hazmat_chestplate" },
+    "P": { "item": "createnucleartech:basic_hazmat_leggings" }
+  },
+  "result": {
+    "id": "createnucleartech:hazmat_kit"
+  }
+}

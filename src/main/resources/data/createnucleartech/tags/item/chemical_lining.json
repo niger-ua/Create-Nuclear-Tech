@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:rubber_strip",
+      "required": false
+    },
+    {
+      "id": "tfmg:rubber_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:polyethylene_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:polyvinyl_chloride_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:polytetrafluoroethylene_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:cured_epoxy_sheet",
+      "required": false
+    },
+    {
+      "id": "chemica:carbon_fiber_composite_sheet",
+      "required": false
+    }
+  ]
+}

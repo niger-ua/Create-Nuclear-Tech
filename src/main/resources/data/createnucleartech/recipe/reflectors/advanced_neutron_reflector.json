@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "pattern": [
+    "RR",
+    "RF"
+  ],
+  "key": {
+    "F": {
+      "item": "tfmg:steel_frame"
+    },
+    "R": {
+      "item": "createnucleartech:reflector_tier_2"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:advanced_neutron_reflector",
+    "count": 1
+  }
+}

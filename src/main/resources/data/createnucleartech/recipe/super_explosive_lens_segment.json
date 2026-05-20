@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "chemica:nitroglycerin_bucket"
+    },
+    "S": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "NNN",
+    "SSS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createnucleartech:super_explosive_lens_segment"
+  }
+}

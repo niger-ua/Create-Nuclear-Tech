@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "createnucleartech:block/waste_earth_bottom",
+    "side": "createnucleartech:block/waste_earth_side",
+    "top": "createnucleartech:block/waste_earth_top"
+  }
+}

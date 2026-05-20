@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "createnucleartech"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["X"],
+  "key": {
+    "X": { "item": "minecraft:barrier" }
+  },
+  "result": {
+    "id": "minecraft:barrier"
+  }
+}

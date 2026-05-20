@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 2 ",
+    "9R9",
+    " 2S"
+  ],
+  "key": {
+    "2": {
+      "item": "createnucleartech:plutonium_240_ingot"
+    },
+    "9": {
+      "item": "createnucleartech:plutonium_239_ingot"
+    },
+    "R": {
+      "item": "createnucleartech:reflector_tier_3"
+    },
+    "S": {
+      "item": "tfmg:screwdriver"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:plutonium_core_inactive",
+    "count": 1
+  }
+}

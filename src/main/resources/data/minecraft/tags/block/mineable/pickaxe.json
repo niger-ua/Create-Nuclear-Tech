@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createnucleartech:nuclear_bomb",
+    "createnucleartech:lead_irradiation_box",
+    "createnucleartech:blast_furnace",
+    "createnucleartech:early_neutron_reflector",
+    "createnucleartech:advanced_neutron_reflector",
+    "createnucleartech:elite_neutron_reflector",
+    "createnucleartech:waste_trinitite",
+    "createnucleartech:thorium_ore",
+    "createnucleartech:deepslate_thorium_ore",
+    "createnucleartech:niter_ore",
+    "createnucleartech:deepslate_niter_ore",
+    "createnucleartech:beryllium_ore",
+    "createnucleartech:deepslate_beryllium_ore",
+    "createnucleartech:cinnabar_ore",
+    "createnucleartech:deepslate_cinnabar_ore",
+    "createnucleartech:fuel_holder"
+  ]
+}

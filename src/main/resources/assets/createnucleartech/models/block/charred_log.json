@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "createnucleartech:block/waste_log_top",
+    "side": "createnucleartech:block/waste_log"
+  }
+}

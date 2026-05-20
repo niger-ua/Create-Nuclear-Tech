@@ -1,0 +1,71 @@
+{
+  "type": "create:mechanical_crafting",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tacz"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "accept_mirrored": true,
+  "category": "equipment",
+  "key": {
+    "Z": {
+      "item": "create:brass_sheet"
+    },
+    "C": {
+      "item": "tfmg:rubber_sheet"
+    },
+    "B": {
+      "item": "tfmg:aluminum_pipe"
+    },
+    "R": {
+      "item": "tfmg:aluminum_ingot"
+    },
+    "Q": {
+      "item": "minecraft:glass_pane"
+    },
+    "M": {
+      "item": "tfmg:steel_mechanism"
+    },
+    "A": {
+      "item": "tfmg:screw"
+    },
+    "H": {
+      "item": "chemica:titanium_sheet"
+    },
+    "G": {
+      "item": "tfmg:plastic_sheet"
+    },
+    "S": {
+      "item": "tfmg:aluminum_sheet"
+    }
+  },
+  "pattern": [
+    "BBBBB",
+    "RMMAS",
+    "CGGGZ",
+    " Q H "
+  ],
+  "result": {
+    "id": "tacz:modern_kinetic_gun",
+    "components": {
+      "minecraft:custom_data": {
+        "GunId": "gz:auga3cqc"
+      }
+    },
+    "count": 1
+  },
+  "show_notification": false
+}

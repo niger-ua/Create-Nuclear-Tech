@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_gold_ore"
+    }
+  ],
+  "processing_time": 180,
+  "results": [
+    {
+      "id": "chemica:gold_dust",
+      "count": 2
+    }
+  ]
+}

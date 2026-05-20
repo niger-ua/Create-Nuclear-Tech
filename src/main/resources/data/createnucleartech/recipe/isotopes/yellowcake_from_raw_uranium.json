@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "neoforge:conditions": [
+    { "type": "neoforge:mod_loaded", "modid": "crowns" }
+  ],
+  "ingredients": [
+    { "item": "crowns:raw_uranium" }
+  ],
+  "result": {
+    "item": "crowns:crushed_uranium",
+    "count": 1
+  }
+}

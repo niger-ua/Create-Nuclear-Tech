@@ -1,0 +1,24 @@
+{
+  "bomb_fuse": {
+    "sounds": [
+      {
+        "name": "createnucleartech:bomb_fuse"
+      }
+    ]
+  },
+  "nuclear_explosion": {
+    "sounds": [
+      {
+        "name": "createnucleartech:nuclear_explosion",
+        "stream": false
+      }
+    ]
+  },
+  "vomit": {
+    "sounds": [
+      {
+        "name": "createnucleartech:vomit"
+      }
+    ]
+  }
+}

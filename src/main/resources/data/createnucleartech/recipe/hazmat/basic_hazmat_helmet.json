@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "pattern": [
+    "EEE",
+    "EIE",
+    " P "
+  ],
+  "key": {
+    "E": {
+      "item": "createnucleartech:hazmat_cloth"
+    },
+    "I": {
+      "item": "minecraft:glass_pane"
+    },
+    "P": {
+      "item": "create:iron_sheet"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:basic_hazmat_helmet"
+  }
+}

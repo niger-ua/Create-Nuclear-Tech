@@ -1,0 +1,34 @@
+{
+  "type": "tfmg:vat_machine_recipe",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "allowedVatTypes": [
+    "tfmg:cast_iron_vat",
+    "tfmg:steel_vat",
+    "tfmg:firebrick_lined_vat"
+  ],
+  "ingredients": [
+    {
+      "item": "createnucleartech:raw_cinnabar"
+    }
+  ],
+  "machines": [
+    "tfmg:centrifuge"
+  ],
+  "minSize": 1,
+  "processingTime": 180,
+  "results": [
+    {
+      "count": 4,
+      "id": "createnucleartech:mercury_drop"
+    },
+    {
+      "chance": 0.35,
+      "id": "createnucleartech:mercury_drop"
+    }
+  ]
+}

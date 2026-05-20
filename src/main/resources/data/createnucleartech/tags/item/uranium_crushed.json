@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:crushed_raw_materials/uranium",
+      "required": false
+    },
+    {
+      "id": "create:crushed_raw_uranium",
+      "required": false
+    },
+    {
+      "id": "crowns:crushed_uranium",
+      "required": false
+    }
+  ]
+}

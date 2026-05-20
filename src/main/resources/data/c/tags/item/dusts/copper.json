@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "chemica:copper_dust",
+      "required": false
+    },
+    {
+      "id": "tfmg:copper_dust",
+      "required": false
+    }
+  ]
+}
