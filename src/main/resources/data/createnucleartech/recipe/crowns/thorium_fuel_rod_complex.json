@@ -13,24 +13,17 @@
   "pattern": [
     "LTL",
     "GTG",
-    "TIT"
+    "TBT"
   ],
   "key": {
     "L": { "item": "tfmg:lead_sheet" },
     "G": { "item": "chemica:graphite_sheet" },
     "I": { "item": "chemica:iridium_sheet" },
+    "B": { "item": "createnucleartech:beryllium_ingot" },
     "T": { "item": "createnucleartech:thorium_ingot" }
   },
   "result": {
-    "id": "crowns:fuel_rod",
-    "components": {
-      "minecraft:custom_data": {
-        "composition": {
-          "createnucleartech:profile": "thorium",
-          "createnucleartech:th232": 1.0
-        }
-      }
-    },
-    "count": 12
+    "id": "createnucleartech:thorium_fuel_rod",
+    "count": 2
   }
 }

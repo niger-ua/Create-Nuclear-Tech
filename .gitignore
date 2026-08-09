@@ -1,0 +1,45 @@
+# Gradle and build output
+.gradle/
+build/
+out/
+run/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+**/.DS_Store
+
+# Local development dependencies and extracted reference mods
+*.jar
+*.zip
+!gradle/wrapper/gradle-wrapper.jar
+libs/
+mezz/
+tacz/
+textures/
+Fuels/
+texture_*_backup_*/
+createmetallurgy-*/
+А ВОТ ЕЩЕ ОДИН/
+ВОТ ПАПКА С ПРИМЕРОЧНЫМ МОДОМ/
+Вот тебе еще/
+Кодекс вот тебе /
+Попа бери эту папку/
+библиотека кровна/
+
+# Local notes and diagnostics
+crash_log.html
+список.txt
+gerger3d.json
+gerger3dtexture.png
+MOD_ITEMS_REPORT.md
+CROWNS_REACTOR_STUDY.md
+docs/example-common.toml
+
+# Temporary editor files
+*.pxo
+*.tmp
+*.bak
+*~

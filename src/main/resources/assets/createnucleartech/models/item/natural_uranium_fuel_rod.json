@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createnucleartech:block/fuel_holder/fuel_rod_natural_uranium"
+    "layer0": "createnucleartech:item/natural_uranium_fuel_rod"
   }
 }

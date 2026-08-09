@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createnucleartech:item/spent_enriched_uranium_fuel_rod"
+  }
+}

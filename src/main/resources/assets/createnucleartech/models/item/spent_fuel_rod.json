@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createnucleartech:block/fuel_holder/fuel_holder_spent"
+    "layer0": "createnucleartech:item/spent_fuel_rod"
   }
 }

@@ -1,11 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 2 ",
+    " B ",
     "9R9",
     " 2S"
   ],
   "key": {
+    "B": {
+      "item": "createnucleartech:beryllium_ingot"
+    },
     "2": {
       "item": "createnucleartech:plutonium_240_ingot"
     },

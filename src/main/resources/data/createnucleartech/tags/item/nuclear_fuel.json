@@ -12,10 +12,6 @@
       "required": false
     },
     {
-      "id": "crowns:fuel_rod",
-      "required": false
-    },
-    {
       "id": "crowns:fuel_assembly",
       "required": false
     },
@@ -26,6 +22,13 @@
     "createnucleartech:plutonium_fuel_rod",
     "createnucleartech:reactor_plutonium_fuel_rod",
     "createnucleartech:thorium_fuel_rod",
-    "createnucleartech:spent_fuel_rod"
+    "createnucleartech:spent_fuel_rod",
+    "createnucleartech:spent_natural_uranium_fuel_rod",
+    "createnucleartech:spent_enriched_uranium_fuel_rod",
+    "createnucleartech:spent_military_uranium_fuel_rod",
+    "createnucleartech:spent_mox_fuel_rod",
+    "createnucleartech:spent_plutonium_fuel_rod",
+    "createnucleartech:spent_reactor_plutonium_fuel_rod",
+    "createnucleartech:spent_thorium_fuel_rod"
   ]
 }

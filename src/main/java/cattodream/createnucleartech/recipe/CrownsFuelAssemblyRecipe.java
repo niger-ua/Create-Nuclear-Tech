@@ -1,7 +1,9 @@
 package cattodream.createnucleartech.recipe;
 
 import cattodream.createnucleartech.ModRegistry;
+import cattodream.createnucleartech.items.CntFuelRodItem;
 import cattodream.createnucleartech.integration.crowns.CrownsFuelProfile;
+import cattodream.createnucleartech.processing.CntFuelType;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -27,7 +29,6 @@ import java.util.Map;
  * static Crowns result.
  */
 public class CrownsFuelAssemblyRecipe extends CustomRecipe {
-    private static final ResourceLocation FUEL_ROD = ResourceLocation.fromNamespaceAndPath("crowns", "fuel_rod");
     private static final ResourceLocation FUEL_ASSEMBLY = ResourceLocation.fromNamespaceAndPath("crowns", "fuel_assembly");
     private static final ResourceLocation ASSEMBLY_CORE = ResourceLocation.fromNamespaceAndPath("chemica", "tungsten_ingot");
 
@@ -124,19 +125,18 @@ public class CrownsFuelAssemblyRecipe extends CustomRecipe {
     }
 
     private static CompoundTag compositionForRod(ItemStack stack) {
-        if (stack.isEmpty() || !FUEL_ROD.equals(BuiltInRegistries.ITEM.getKey(stack.getItem()))) {
+        if (stack.isEmpty()) {
             return null;
         }
-        CustomData data = stack.get(DataComponents.CUSTOM_DATA);
-        if (data == null || data.isEmpty()) {
-            return null;
+        if (stack.getItem() instanceof CntFuelRodItem rodItem) {
+            CntFuelType type = rodItem.fuelType();
+            CompoundTag composition = type.composition();
+            if (type == CntFuelType.SPENT) {
+                return null;
+            }
+            return composition.isEmpty() ? null : composition;
         }
-        CompoundTag root = data.copyTag();
-        if (!root.contains("composition")) {
-            return null;
-        }
-        CompoundTag composition = root.getCompound("composition");
-        return composition.isEmpty() ? null : composition;
+        return null;
     }
 
     private static boolean isAssemblyFrame(ItemStack stack) {

@@ -1,0 +1,37 @@
+{
+  "type": "tfmg:vat_machine_recipe",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    }
+  ],
+  "allowedVatTypes": [
+    "tfmg:steel_vat",
+    "tfmg:firebrick_lined_vat"
+  ],
+  "ingredients": [
+    {
+      "item": "createnucleartech:spent_mox_fuel_rod"
+    }
+  ],
+  "machines": [
+    "tfmg:centrifuge"
+  ],
+  "minSize": 1,
+  "processingTime": 1500,
+  "results": [
+    {
+      "count": 5,
+      "id": "crowns:depleted_uranium_nugget"
+    },
+    {
+      "chance": 0.45,
+      "id": "createnucleartech:plutonium_239_ingot"
+    },
+    {
+      "chance": 0.35,
+      "id": "createnucleartech:plutonium_240_ingot"
+    }
+  ]
+}

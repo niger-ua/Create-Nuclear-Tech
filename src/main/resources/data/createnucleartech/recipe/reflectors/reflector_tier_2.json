@@ -12,7 +12,10 @@
   ],
   "ingredients": [
     {
-      "tag": "c:ingots/tungsten"
+      "item": "createnucleartech:beryllium_ingot"
+    },
+    {
+      "item": "createnucleartech:beryllium_ingot"
     },
     {
       "tag": "c:plates/graphite"

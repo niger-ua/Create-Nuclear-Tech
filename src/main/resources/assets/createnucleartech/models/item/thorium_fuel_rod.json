@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createnucleartech:block/fuel_holder/fuel_rod_thorium"
+    "layer0": "createnucleartech:item/thorium_fuel_rod"
   }
 }

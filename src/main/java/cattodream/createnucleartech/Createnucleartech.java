@@ -5,6 +5,7 @@ import cattodream.createnucleartech.client.BlastFurnaceScreen;
 import cattodream.createnucleartech.client.GeigerCounterItemRenderer;
 import cattodream.createnucleartech.client.GeigerHudOverlay;
 import cattodream.createnucleartech.client.HighSpeedMixerRenderer;
+import cattodream.createnucleartech.client.LeadCopycatRenderer;
 import cattodream.createnucleartech.client.LeadIrradiationBoxScreen;
 import cattodream.createnucleartech.client.NuclearFlashOverlay;
 import cattodream.createnucleartech.client.NoopEntityRenderer;
@@ -15,14 +16,21 @@ import cattodream.createnucleartech.client.particle.NuclearSmokeParticle;
 import cattodream.createnucleartech.integration.crowns.CrownsIntegration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.client.event.ModelEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
@@ -41,12 +49,34 @@ public class Createnucleartech {
     public Createnucleartech(IEventBus modEventBus, ModContainer modContainer) {
         ModRegistry.init(modEventBus);
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::hideCreativeEntries);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         CrownsIntegration.assertRequiredDependencyLoaded();
         LOGGER.info("CreateNuclearTech initialized");
+    }
+
+    private void hideCreativeEntries(BuildCreativeModeTabContentsEvent event) {
+        hideFromCreative(event, new ItemStack(ModRegistry.REFLECTOR_TIER_1.get()));
+        hideFromCreative(event, new ItemStack(ModRegistry.REFLECTOR_TIER_2.get()));
+        hideFromCreative(event, new ItemStack(ModRegistry.REFLECTOR_TIER_3.get()));
+        hideFromCreative(event, new ItemStack(ModRegistry.EARLY_NEUTRON_REFLECTOR_ITEM.get()));
+        hideFromCreative(event, new ItemStack(ModRegistry.ADVANCED_NEUTRON_REFLECTOR_ITEM.get()));
+        hideFromCreative(event, new ItemStack(ModRegistry.ELITE_NEUTRON_REFLECTOR_ITEM.get()));
+        hideExternalItemFromCreative(event, "crowns", "fuel_assembly");
+    }
+
+    private static void hideExternalItemFromCreative(BuildCreativeModeTabContentsEvent event, String namespace, String path) {
+        Item item = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath(namespace, path));
+        if (item != Items.AIR) {
+            hideFromCreative(event, new ItemStack(item));
+        }
+    }
+
+    private static void hideFromCreative(BuildCreativeModeTabContentsEvent event, ItemStack stack) {
+        event.remove(stack, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -69,6 +99,7 @@ public class Createnucleartech {
             event.registerEntityRenderer(ModRegistry.NUCLEAR_BOMB_ENTITY.get(), NuclearBombEntityRenderer::new);
             event.registerEntityRenderer(ModRegistry.HBM_NUKE_EXPLOSION_ENTITY.get(), NoopEntityRenderer::new);
             event.registerBlockEntityRenderer(ModRegistry.HIGH_SPEED_MIXER_ENTITY.get(), HighSpeedMixerRenderer::new);
+            event.registerBlockEntityRenderer(ModRegistry.LEAD_COPYCAT_ENTITY.get(), LeadCopycatRenderer::new);
         }
 
         @SubscribeEvent

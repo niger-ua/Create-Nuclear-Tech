@@ -4,22 +4,32 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
     }
   ],
   "pattern": [
-    "SCS",
-    "CRC",
-    "SCS"
+    "LSL",
+    "CEC",
+    "LRL"
   ],
   "key": {
+    "L": {
+      "item": "tfmg:lead_sheet"
+    },
+    "S": {
+      "item": "chemica:silver_sheet"
+    },
+    "E": {
+      "item": "chemica:electronic_circuit"
+    },
     "C": {
       "item": "minecraft:copper_ingot"
     },
     "R": {
       "item": "minecraft:redstone"
-    },
-    "S": {
-      "item": "tfmg:lead_sheet"
     }
   },
   "result": {

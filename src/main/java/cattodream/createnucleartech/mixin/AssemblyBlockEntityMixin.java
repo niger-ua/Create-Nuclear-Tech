@@ -28,6 +28,9 @@ public abstract class AssemblyBlockEntityMixin {
     public float nbrOfFission;
 
     @Shadow
+    float power;
+
+    @Shadow
     public LerpedFloat additionalNeutronsAbsorbed;
 
     @Shadow
@@ -53,11 +56,21 @@ public abstract class AssemblyBlockEntityMixin {
 
     @Inject(method = "setComposition", at = @At("HEAD"))
     private void createnucleartech$readFuelProfile(CompoundTag composition, CallbackInfo ci) {
+        createnucleartech$fuelProfileOverride = "";
+        createnucleartech$thorium232 = 0.0D;
+        createnucleartech$plutonium240 = 0.0D;
         if (composition.contains(CrownsFuelProfile.PROFILE_KEY)) {
             createnucleartech$fuelProfileOverride = composition.getString(CrownsFuelProfile.PROFILE_KEY);
         }
         createnucleartech$thorium232 = composition.getDouble(CrownsFuelProfile.TH232_KEY);
         createnucleartech$plutonium240 = composition.getDouble(CrownsFuelProfile.PU240_KEY);
+    }
+
+    @Inject(method = "setComposition", at = @At("RETURN"))
+    private void createnucleartech$clearEmptyComposition(CompoundTag composition, CallbackInfo ci) {
+        if (composition.isEmpty()) {
+            radioactiveElements.clear();
+        }
     }
 
     @Inject(method = "saveComposition", at = @At("RETURN"), cancellable = true)
@@ -84,6 +97,10 @@ public abstract class AssemblyBlockEntityMixin {
         }
 
         CrownsFuelProfile profile = createnucleartech$fuelProfile();
+        if (profile == CrownsFuelProfile.INERT || radioactiveElements.isEmpty() && createnucleartech$thorium232 <= 0.0D && createnucleartech$plutonium240 <= 0.0D) {
+            cir.setReturnValue(0.0F);
+            return;
+        }
         float startup = profile.startupMultiplier(level, self.getBlockPos());
         float multiplier = CrownsNeutronDiagnostics.reflectorMultiplier(level, self.getBlockPos());
         float baseActivity = cir.getReturnValueF();
@@ -138,6 +155,51 @@ public abstract class AssemblyBlockEntityMixin {
                 profile.displayName(),
                 started
         );
+    }
+
+    @Inject(method = "tick", at = @At("RETURN"))
+    private void createnucleartech$makeCustomFuelHotterAndLessStable(CallbackInfo ci) {
+        BlockEntity self = (BlockEntity) (Object) this;
+        Level level = self.getLevel();
+        if (level == null || level.isClientSide) {
+            return;
+        }
+
+        CrownsFuelProfile profile = createnucleartech$fuelProfile();
+        if (profile == CrownsFuelProfile.INERT) {
+            return;
+        }
+
+        float startup = profile.startupMultiplier(level, self.getBlockPos());
+        if (startup <= 0.01F) {
+            return;
+        }
+
+        float effectiveK = getEffectiveK();
+        float supercritical = Math.max(0.0F, effectiveK - 1.0F);
+        float fission = Math.max(0.0F, nbrOfFission);
+        float fissionHeat = Math.min(4.0F, fission * 0.000020F);
+        float instabilityHeat = supercritical * profile.activityMultiplier() * 0.32F;
+        float heatBonus = (fissionHeat + instabilityHeat) * startup;
+
+        if (Float.isFinite(heatBonus) && heatBonus > 0.0F) {
+            temperature += heatBonus;
+            power += heatBonus * 2400.0F;
+        }
+
+        if (supercritical > 0.08F) {
+            additionalNeutronsAbsorbed.chaseTimed(
+                    additionalNeutronsAbsorbed.getChaseTarget() + supercritical * profile.activityMultiplier() * 0.55F,
+                    4
+            );
+        }
+
+        if (!Float.isFinite(temperature)) {
+            temperature = 300.0F;
+        }
+        if (!Float.isFinite(nbrOfFission)) {
+            nbrOfFission = 0.0F;
+        }
     }
 
     @Unique

@@ -87,7 +87,7 @@ public class LeadIrradiationCategory implements IRecipeCategory<LeadIrradiationJ
     }
 
     private static ItemStack crownsFuelRod() {
-        return new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("crowns", "fuel_rod")));
+        return new ItemStack(ModRegistry.NATURAL_URANIUM_FUEL_ROD.get());
     }
 
     @Override

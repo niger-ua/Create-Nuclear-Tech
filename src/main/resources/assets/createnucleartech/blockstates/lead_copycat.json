@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "copied=false": {
+      "model": "createnucleartech:block/lead_copycat"
+    },
+    "copied=true": {
+      "model": "createnucleartech:block/lead_copycat_hidden"
+    }
+  }
+}

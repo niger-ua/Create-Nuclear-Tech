@@ -11,26 +11,17 @@
     }
   ],
   "pattern": [
-    " L ",
+    " B ",
     "GPG",
     " T "
   ],
   "key": {
-    "L": { "item": "tfmg:lead_sheet" },
+    "B": { "item": "createnucleartech:beryllium_ingot" },
     "G": { "item": "chemica:graphite_sheet" },
     "T": { "item": "chemica:titanium_sheet" },
     "P": { "item": "createnucleartech:plutonium_239_ingot" }
   },
   "result": {
-    "id": "crowns:fuel_rod",
-    "components": {
-      "minecraft:custom_data": {
-        "composition": {
-          "createnucleartech:profile": "plutonium_239",
-          "crowns:p239": 1.0
-        }
-      }
-    },
-    "count": 8
+    "id": "createnucleartech:plutonium_fuel_rod"
   }
 }

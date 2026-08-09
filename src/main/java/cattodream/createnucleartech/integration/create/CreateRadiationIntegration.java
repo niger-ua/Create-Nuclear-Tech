@@ -170,13 +170,13 @@ public final class CreateRadiationIntegration {
         Set<IFluidHandler> seenHandlers = Collections.newSetFromMap(new IdentityHashMap<>());
         double total = 0.0D;
 
-        IFluidHandler unsided = Capabilities.FluidHandler.BLOCK.getCapability(level, pos, state, blockEntity, null);
-        if (unsided != null && seenHandlers.add(unsided)) {
-            total += fluidRadiation(unsided);
-        }
-
         for (Direction direction : Direction.values()) {
-            IFluidHandler sided = Capabilities.FluidHandler.BLOCK.getCapability(level, pos, state, blockEntity, direction);
+            IFluidHandler sided;
+            try {
+                sided = Capabilities.FluidHandler.BLOCK.getCapability(level, pos, state, blockEntity, direction);
+            } catch (RuntimeException exception) {
+                continue;
+            }
             if (sided != null && seenHandlers.add(sided)) {
                 total += fluidRadiation(sided);
             }

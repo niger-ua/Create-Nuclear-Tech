@@ -56,9 +56,6 @@ public final class RadiationMaterials {
         if (state.isAir()) {
             return 0.0D;
         }
-        if (state.is(ModRegistry.ASH_BLOCK.get())) {
-            return Config.nuclearWasteRadiation * Config.radioactiveItemStrength * 18.0D;
-        }
         if (state.is(ModRegistry.WASTE_EARTH.get())) {
             return Config.nuclearWasteRadiation * Config.radioactiveItemStrength * 1.5D;
         }

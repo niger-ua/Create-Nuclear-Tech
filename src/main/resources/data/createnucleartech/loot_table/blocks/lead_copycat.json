@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "createnucleartech:ash_block"
+          "name": "createnucleartech:lead_copycat"
         }
       ],
       "conditions": [
@@ -16,5 +16,5 @@
       ]
     }
   ],
-  "random_sequence": "createnucleartech:blocks/ash_block"
+  "random_sequence": "createnucleartech:blocks/lead_copycat"
 }

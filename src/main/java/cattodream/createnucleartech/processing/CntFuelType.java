@@ -59,6 +59,20 @@ public enum CntFuelType implements StringRepresentable {
         return supplier == null ? ItemStack.EMPTY : new ItemStack(supplier.get(), count);
     }
 
+    public static ItemStack newSpentRodStack(String spentFrom, int count) {
+        Supplier<? extends Item> supplier = switch (byName(spentFrom)) {
+            case NATURAL_URANIUM -> ModRegistry.SPENT_NATURAL_URANIUM_FUEL_ROD;
+            case ENRICHED_URANIUM -> ModRegistry.SPENT_ENRICHED_URANIUM_FUEL_ROD;
+            case MILITARY_URANIUM -> ModRegistry.SPENT_MILITARY_URANIUM_FUEL_ROD;
+            case MOX -> ModRegistry.SPENT_MOX_FUEL_ROD;
+            case PLUTONIUM_239 -> ModRegistry.SPENT_PLUTONIUM_FUEL_ROD;
+            case REACTOR_GRADE_PLUTONIUM -> ModRegistry.SPENT_REACTOR_PLUTONIUM_FUEL_ROD;
+            case THORIUM -> ModRegistry.SPENT_THORIUM_FUEL_ROD;
+            default -> ModRegistry.SPENT_FUEL_ROD;
+        };
+        return new ItemStack(supplier.get(), count);
+    }
+
     public CompoundTag composition() {
         CompoundTag composition = new CompoundTag();
         if (profile != null) {

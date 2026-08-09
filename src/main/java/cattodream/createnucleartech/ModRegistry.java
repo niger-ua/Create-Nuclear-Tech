@@ -27,14 +27,14 @@ import cattodream.createnucleartech.processing.CntFuelHolderBlockEntity;
 import cattodream.createnucleartech.processing.CntFuelType;
 import cattodream.createnucleartech.processing.HighSpeedMixerBlock;
 import cattodream.createnucleartech.processing.HighSpeedMixerBlockEntity;
+import cattodream.createnucleartech.processing.LeadCopycatBlock;
+import cattodream.createnucleartech.processing.LeadCopycatBlockEntity;
 import cattodream.createnucleartech.processing.LeadIrradiationBoxBlock;
 import cattodream.createnucleartech.processing.LeadIrradiationBoxBlockEntity;
 import cattodream.createnucleartech.radiation.RadiationSicknessEffect;
 import cattodream.createnucleartech.recipe.CrownsFuelAssemblyRecipe;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleType;
@@ -47,7 +47,6 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.minecraft.world.inventory.MenuType;
@@ -117,6 +116,14 @@ public final class ModRegistry {
                     .sound(SoundType.METAL)
                     .noOcclusion()
     );
+    public static final DeferredBlock<LeadCopycatBlock> LEAD_COPYCAT = BLOCKS.registerBlock(
+            "lead_copycat",
+            LeadCopycatBlock::new,
+            BlockBehaviour.Properties.of()
+                    .strength(5.0F, 1200.0F)
+                    .sound(SoundType.METAL)
+                    .noOcclusion()
+    );
     public static final DeferredBlock<Block> EARLY_NEUTRON_REFLECTOR = BLOCKS.registerSimpleBlock(
             "early_neutron_reflector",
             BlockBehaviour.Properties.of()
@@ -135,23 +142,11 @@ public final class ModRegistry {
                     .strength(12.0F, 30.0F)
                     .sound(SoundType.METAL)
     );
-    public static final DeferredBlock<Block> ASH_BLOCK = BLOCKS.registerSimpleBlock(
-            "ash_block",
-            BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)
-                    .strength(0.45F)
-                    .sound(SoundType.SAND)
-    );
     public static final DeferredBlock<Block> WASTE_EARTH = BLOCKS.registerSimpleBlock(
             "waste_earth",
             BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)
                     .strength(0.55F)
                     .sound(SoundType.GRAVEL)
-    );
-    public static final DeferredBlock<Block> WASTE_TRINITITE = BLOCKS.registerSimpleBlock(
-            "waste_trinitite",
-            BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)
-                    .strength(1.1F, 2.0F)
-                    .sound(SoundType.GLASS)
     );
     public static final DeferredBlock<Block> DEAD_LEAVES = BLOCKS.registerBlock(
             "dead_leaves",
@@ -193,6 +188,10 @@ public final class ModRegistry {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CntFuelHolderBlockEntity>> FUEL_HOLDER_ENTITY = BLOCK_ENTITY_TYPES.register(
             "fuel_holder",
             () -> new BlockEntityType<>(CntFuelHolderBlockEntity::new, Set.of(FUEL_HOLDER.get()), null)
+    );
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<LeadCopycatBlockEntity>> LEAD_COPYCAT_ENTITY = BLOCK_ENTITY_TYPES.register(
+            "lead_copycat",
+            () -> new BlockEntityType<>(LeadCopycatBlockEntity::new, Set.of(LEAD_COPYCAT.get()), null)
     );
     public static final DeferredHolder<EntityType<?>, EntityType<NuclearBombEntity>> NUCLEAR_BOMB_ENTITY = ENTITY_TYPES.register(
             "nuclear_bomb",
@@ -363,6 +362,34 @@ public final class ModRegistry {
             "spent_fuel_rod",
             () -> new CntFuelRodItem(CntFuelType.SPENT, new Item.Properties().stacksTo(64))
     );
+    public static final DeferredItem<CntFuelRodItem> SPENT_NATURAL_URANIUM_FUEL_ROD = ITEMS.register(
+            "spent_natural_uranium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "natural_uranium", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_ENRICHED_URANIUM_FUEL_ROD = ITEMS.register(
+            "spent_enriched_uranium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "enriched_uranium", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_MILITARY_URANIUM_FUEL_ROD = ITEMS.register(
+            "spent_military_uranium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "military_uranium", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_MOX_FUEL_ROD = ITEMS.register(
+            "spent_mox_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "mox", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_PLUTONIUM_FUEL_ROD = ITEMS.register(
+            "spent_plutonium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "plutonium_239", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_REACTOR_PLUTONIUM_FUEL_ROD = ITEMS.register(
+            "spent_reactor_plutonium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "reactor_grade_plutonium", new Item.Properties().stacksTo(64))
+    );
+    public static final DeferredItem<CntFuelRodItem> SPENT_THORIUM_FUEL_ROD = ITEMS.register(
+            "spent_thorium_fuel_rod",
+            () -> new CntFuelRodItem(CntFuelType.SPENT, "thorium", new Item.Properties().stacksTo(64))
+    );
     public static final DeferredItem<?> NUCLEAR_BOMB_ITEM = ITEMS.registerSimpleBlockItem(
             NUCLEAR_BOMB,
             new Item.Properties().stacksTo(1)
@@ -383,6 +410,10 @@ public final class ModRegistry {
             FUEL_HOLDER,
             new Item.Properties().stacksTo(64)
     );
+    public static final DeferredItem<?> LEAD_COPYCAT_ITEM = ITEMS.registerSimpleBlockItem(
+            LEAD_COPYCAT,
+            new Item.Properties().stacksTo(64)
+    );
     public static final DeferredItem<?> EARLY_NEUTRON_REFLECTOR_ITEM = ITEMS.registerSimpleBlockItem(
             EARLY_NEUTRON_REFLECTOR,
             new Item.Properties().stacksTo(64)
@@ -395,16 +426,8 @@ public final class ModRegistry {
             ELITE_NEUTRON_REFLECTOR,
             new Item.Properties().stacksTo(64)
     );
-    public static final DeferredItem<?> ASH_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
-            ASH_BLOCK,
-            new Item.Properties().stacksTo(64)
-    );
     public static final DeferredItem<?> WASTE_EARTH_ITEM = ITEMS.registerSimpleBlockItem(
             WASTE_EARTH,
-            new Item.Properties().stacksTo(64)
-    );
-    public static final DeferredItem<?> WASTE_TRINITITE_ITEM = ITEMS.registerSimpleBlockItem(
-            WASTE_TRINITITE,
             new Item.Properties().stacksTo(64)
     );
     public static final DeferredItem<?> DEAD_LEAVES_ITEM = ITEMS.registerSimpleBlockItem(
@@ -544,30 +567,13 @@ public final class ModRegistry {
                     .title(Component.translatable("itemGroup.createnucleartech"))
                     .icon(() -> new ItemStack(GEIGER_COUNTER.get()))
                     .displayItems((parameters, output) -> {
-                        ITEMS.getEntries().forEach(item -> output.accept(item.get()));
+                        ITEMS.getEntries().forEach(item -> {
+                            Item value = item.get();
+                            if (!isTemporarilyHidden(value)) {
+                                output.accept(value);
+                            }
+                        });
                         HbmOreBlocks.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
-                        output.accept(fuelAssembly("natural_uranium", composition -> {
-                            composition.putDouble("crowns:u235", 0.0078125D);
-                            composition.putDouble("crowns:u238", 0.9921875D);
-                        }));
-                        output.accept(fuelAssembly("enriched_uranium", composition -> {
-                            composition.putDouble("crowns:u235", 0.1875D);
-                            composition.putDouble("crowns:u238", 0.8125D);
-                        }));
-                        output.accept(fuelAssembly("military_uranium", composition -> {
-                            composition.putDouble("crowns:u235", 0.875D);
-                            composition.putDouble("crowns:u238", 0.125D);
-                        }));
-                        output.accept(fuelAssembly("mox", composition -> {
-                            composition.putDouble("crowns:p239", 0.25D);
-                            composition.putDouble("crowns:u238", 0.75D);
-                        }));
-                        output.accept(fuelAssembly("plutonium_239", composition -> composition.putDouble("crowns:p239", 1.0D)));
-                        output.accept(fuelAssembly("reactor_grade_plutonium", composition -> {
-                            composition.putDouble("crowns:p239", 0.72D);
-                            composition.putDouble("createnucleartech:pu240", 0.28D);
-                        }));
-                        output.accept(fuelAssembly("thorium", composition -> composition.putDouble("createnucleartech:th232", 1.0D)));
                     })
                     .build()
     );
@@ -598,14 +604,28 @@ public final class ModRegistry {
         ));
     }
 
-    private static ItemStack fuelAssembly(String profile, java.util.function.Consumer<CompoundTag> builder) {
-        ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("crowns", "fuel_assembly")));
-        CompoundTag composition = new CompoundTag();
-        composition.putString("createnucleartech:profile", profile);
-        builder.accept(composition);
-        CompoundTag root = new CompoundTag();
-        root.put("composition", composition);
-        stack.set(DataComponents.CUSTOM_DATA, CustomData.of(root));
-        return stack;
+    private static boolean isTemporarilyHidden(Item item) {
+        return item == HAZMAT_CLOTH_RED.get()
+                || item == HAZMAT_CLOTH_GREY.get()
+                || item == REFLECTOR_TIER_1.get()
+                || item == REFLECTOR_TIER_2.get()
+                || item == REFLECTOR_TIER_3.get()
+                || item == EARLY_NEUTRON_REFLECTOR_ITEM.get()
+                || item == ADVANCED_NEUTRON_REFLECTOR_ITEM.get()
+                || item == ELITE_NEUTRON_REFLECTOR_ITEM.get()
+                || item == ADVANCED_HAZMAT_HELMET.get()
+                || item == ADVANCED_HAZMAT_CHESTPLATE.get()
+                || item == ADVANCED_HAZMAT_LEGGINGS.get()
+                || item == ADVANCED_HAZMAT_BOOTS.get()
+                || item == REINFORCED_HAZMAT_HELMET.get()
+                || item == REINFORCED_HAZMAT_CHESTPLATE.get()
+                || item == REINFORCED_HAZMAT_LEGGINGS.get()
+                || item == REINFORCED_HAZMAT_BOOTS.get()
+                || item == ELITE_HAZMAT_HELMET.get()
+                || item == ELITE_HAZMAT_CHESTPLATE.get()
+                || item == ELITE_HAZMAT_LEGGINGS.get()
+                || item == ELITE_HAZMAT_BOOTS.get()
+                || item == HAZMAT_RED_KIT.get()
+                || item == HAZMAT_GREY_KIT.get();
     }
 }

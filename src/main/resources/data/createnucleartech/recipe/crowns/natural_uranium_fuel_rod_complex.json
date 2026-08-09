@@ -13,25 +13,17 @@
   "pattern": [
     "LUL",
     "GUG",
-    "TUT"
+    "TBT"
   ],
   "key": {
     "L": { "item": "tfmg:lead_sheet" },
     "G": { "item": "chemica:graphite_sheet" },
     "T": { "item": "chemica:titanium_sheet" },
+    "B": { "item": "createnucleartech:beryllium_ingot" },
     "U": { "item": "crowns:uranium_ingot" }
   },
   "result": {
-    "id": "crowns:fuel_rod",
-    "components": {
-      "minecraft:custom_data": {
-        "composition": {
-          "createnucleartech:profile": "natural_uranium",
-          "crowns:u235": 0.0078125,
-          "crowns:u238": 0.9921875
-        }
-      }
-    },
-    "count": 16
+    "id": "createnucleartech:natural_uranium_fuel_rod",
+    "count": 2
   }
 }

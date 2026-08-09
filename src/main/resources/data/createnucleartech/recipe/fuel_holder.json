@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "tfmg"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "chemica"
+    }
+  ],
+  "pattern": [
+    "SLS",
+    "GCG",
+    "ASA"
+  ],
+  "key": {
+    "S": {
+      "item": "tfmg:steel_casing"
+    },
+    "L": {
+      "item": "tfmg:lead_block"
+    },
+    "G": {
+      "item": "chemica:graphite_sheet"
+    },
+    "C": {
+      "item": "tfmg:concrete"
+    },
+    "A": {
+      "item": "chemica:titanium_sheet"
+    }
+  },
+  "result": {
+    "id": "createnucleartech:fuel_holder",
+    "count": 2
+  }
+}

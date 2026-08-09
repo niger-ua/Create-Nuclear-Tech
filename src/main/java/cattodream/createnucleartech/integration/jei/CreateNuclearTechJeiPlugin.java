@@ -5,15 +5,19 @@ import cattodream.createnucleartech.Createnucleartech;
 import cattodream.createnucleartech.ModRegistry;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.IRuntimeRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @JeiPlugin
@@ -28,7 +32,6 @@ public class CreateNuclearTechJeiPlugin implements IModPlugin {
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
         registration.addRecipeCategories(new LeadIrradiationCategory(registration.getJeiHelpers().getGuiHelper()));
-        registration.addRecipeCategories(new FuelAssemblyCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new BlastFurnaceCategory(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new HighSpeedAlloyingCategory(registration.getJeiHelpers().getGuiHelper()));
     }
@@ -55,13 +58,6 @@ public class CreateNuclearTechJeiPlugin implements IModPlugin {
                 new LeadIrradiationJeiRecipe(
                         Ingredient.of(CNTTags.Items.IRIDIUM_IRRADIATION_TARGET),
                         new ItemStack(ModRegistry.IRIDIUM_192_SOURCE.get())
-                )
-        ));
-        registration.addRecipes(FuelAssemblyCategory.TYPE, List.of(
-                new FuelAssemblyJeiRecipe(
-                        Ingredient.of(new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("crowns", "fuel_rod")))),
-                        new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("chemica", "tungsten_ingot"))),
-                        new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("crowns", "fuel_assembly")))
                 )
         ));
         registration.addRecipes(BlastFurnaceCategory.TYPE, List.of(
@@ -119,5 +115,30 @@ public class CreateNuclearTechJeiPlugin implements IModPlugin {
         registration.addRecipeCatalysts(LeadIrradiationCategory.TYPE, ModRegistry.LEAD_IRRADIATION_BOX.get());
         registration.addRecipeCatalysts(BlastFurnaceCategory.TYPE, ModRegistry.BLAST_FURNACE.get());
         registration.addRecipeCatalysts(HighSpeedAlloyingCategory.TYPE, ModRegistry.HIGH_SPEED_MIXER.get());
+    }
+
+    @Override
+    public void registerRuntime(IRuntimeRegistration registration) {
+        registration.getIngredientManager().removeIngredientsAtRuntime(VanillaTypes.ITEM_STACK, hiddenItemStacks());
+    }
+
+    private static List<ItemStack> hiddenItemStacks() {
+        List<ItemStack> stacks = new ArrayList<>();
+        stacks.add(new ItemStack(ModRegistry.REFLECTOR_TIER_1.get()));
+        stacks.add(new ItemStack(ModRegistry.REFLECTOR_TIER_2.get()));
+        stacks.add(new ItemStack(ModRegistry.REFLECTOR_TIER_3.get()));
+        stacks.add(new ItemStack(ModRegistry.EARLY_NEUTRON_REFLECTOR_ITEM.get()));
+        stacks.add(new ItemStack(ModRegistry.ADVANCED_NEUTRON_REFLECTOR_ITEM.get()));
+        stacks.add(new ItemStack(ModRegistry.ELITE_NEUTRON_REFLECTOR_ITEM.get()));
+        addOptional(stacks, "crowns", "fuel_assembly");
+        return stacks;
+    }
+
+    private static void addOptional(List<ItemStack> stacks, String namespace, String path) {
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(namespace, path);
+        Item item = BuiltInRegistries.ITEM.get(id);
+        if (item != Items.AIR) {
+            stacks.add(new ItemStack(item));
+        }
     }
 }

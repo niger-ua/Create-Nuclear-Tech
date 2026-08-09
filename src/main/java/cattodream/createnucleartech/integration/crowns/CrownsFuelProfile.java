@@ -38,14 +38,14 @@ public record CrownsFuelProfile(
     private static final ResourceLocation P239 = ResourceLocation.fromNamespaceAndPath("crowns", "p239");
 
     public static final CrownsFuelProfile INERT = new CrownsFuelProfile("inert", "Inert", 0.0F, 0.0F, 0.0F, 0.0F, false, 0.0F, 1.0F);
-    public static final CrownsFuelProfile NATURAL_URANIUM = new CrownsFuelProfile("natural_uranium", "Natural U", 0.45F, 0.85F, 1.35F, 0.82F, true, 0.35F, 0.0F);
-    public static final CrownsFuelProfile ENRICHED_URANIUM = new CrownsFuelProfile("enriched_uranium", "Enriched U", 0.80F, 1.18F, 1.34F, 1.10F, true, 0.85F, 0.0F);
-    public static final CrownsFuelProfile MILITARY_URANIUM = new CrownsFuelProfile("military_uranium", "HEU", 1.18F, 1.12F, 1.02F, 1.28F, true, 1.15F, 0.0F);
-    public static final CrownsFuelProfile MOX = new CrownsFuelProfile("mox", "MOX", 1.02F, 1.30F, 1.08F, 1.18F, true, 0.65F, 0.0F);
-    public static final CrownsFuelProfile PLUTONIUM_239 = new CrownsFuelProfile("plutonium_239", "Pu-239", 1.42F, 1.10F, 0.62F, 1.38F, false, 0.12F, 0.18F);
-    public static final CrownsFuelProfile REACTOR_GRADE_PLUTONIUM = new CrownsFuelProfile("reactor_grade_plutonium", "Reactor Pu", 1.32F, 0.96F, 0.55F, 1.46F, false, 0.18F, 0.14F);
-    public static final CrownsFuelProfile THORIUM = new CrownsFuelProfile("thorium", "Th-232", 0.20F, 0.75F, 1.48F, 0.62F, false, 0.0F, 0.28F);
-    public static final CrownsFuelProfile SPENT_FUEL = new CrownsFuelProfile("spent", "Spent Fuel", 0.10F, 0.08F, 0.04F, 1.85F, false, 0.0F, 2.0F);
+    public static final CrownsFuelProfile NATURAL_URANIUM = new CrownsFuelProfile("natural_uranium", "Natural U", 0.62F, 1.05F, 1.55F, 1.05F, true, 0.45F, 0.0F);
+    public static final CrownsFuelProfile ENRICHED_URANIUM = new CrownsFuelProfile("enriched_uranium", "Enriched U", 1.05F, 1.45F, 1.55F, 1.35F, true, 1.05F, 0.0F);
+    public static final CrownsFuelProfile MILITARY_URANIUM = new CrownsFuelProfile("military_uranium", "HEU", 1.55F, 1.42F, 1.15F, 1.75F, true, 1.45F, 0.0F);
+    public static final CrownsFuelProfile MOX = new CrownsFuelProfile("mox", "MOX", 1.45F, 1.70F, 1.25F, 1.65F, true, 0.95F, 0.0F);
+    public static final CrownsFuelProfile PLUTONIUM_239 = new CrownsFuelProfile("plutonium_239", "Pu-239", 1.90F, 1.35F, 0.72F, 2.10F, false, 0.20F, 0.16F);
+    public static final CrownsFuelProfile REACTOR_GRADE_PLUTONIUM = new CrownsFuelProfile("reactor_grade_plutonium", "Reactor Pu", 1.70F, 1.15F, 0.62F, 2.25F, false, 0.25F, 0.12F);
+    public static final CrownsFuelProfile THORIUM = new CrownsFuelProfile("thorium", "Th-232", 0.28F, 0.95F, 1.85F, 0.85F, false, 0.0F, 0.22F);
+    public static final CrownsFuelProfile SPENT_FUEL = new CrownsFuelProfile("spent", "Spent Fuel", 0.12F, 0.08F, 0.04F, 2.40F, false, 0.0F, 2.0F);
 
     public static CrownsFuelProfile from(Map<ResourceLocation, Double> composition, String override) {
         return from(composition, override, 0.0D, 0.0D);

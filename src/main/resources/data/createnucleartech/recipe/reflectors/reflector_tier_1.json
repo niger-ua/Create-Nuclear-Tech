@@ -12,10 +12,13 @@
   ],
   "ingredients": [
     {
-      "tag": "c:ingots/steel"
+      "item": "createnucleartech:beryllium_ingot"
     },
     {
       "tag": "c:plates/graphite"
+    },
+    {
+      "tag": "c:ingots/steel"
     }
   ],
   "result": {

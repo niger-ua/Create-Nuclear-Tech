@@ -453,16 +453,13 @@ public final class NuclearAftermath {
             return null;
         }
         if (state.is(Blocks.SAND) || state.is(Blocks.RED_SAND) || state.is(Blocks.GLASS)) {
-            return ModRegistry.ASH_BLOCK.get().defaultBlockState();
+            return ModRegistry.WASTE_EARTH.get().defaultBlockState();
         }
         if (isEarth(state)) {
-            if (severity > 0.78D && random.nextDouble() < 0.28D) {
-                return ModRegistry.ASH_BLOCK.get().defaultBlockState();
-            }
             return ModRegistry.WASTE_EARTH.get().defaultBlockState();
         }
         if (isStone(state) && severity > 0.72D && random.nextDouble() < severity * 0.65D) {
-            return ModRegistry.ASH_BLOCK.get().defaultBlockState();
+            return null;
         }
         return null;
     }
@@ -471,11 +468,14 @@ public final class NuclearAftermath {
         if (state.isAir() || state.is(Blocks.BEDROCK)) {
             return null;
         }
-        if (state.is(Blocks.SAND) || state.is(Blocks.RED_SAND) || state.is(Blocks.GLASS) || isEarth(state)) {
-            return ModRegistry.ASH_BLOCK.get().defaultBlockState();
+        if (state.is(Blocks.SAND) || state.is(Blocks.RED_SAND) || state.is(Blocks.GLASS) || isStone(state)) {
+            return null;
+        }
+        if (isEarth(state)) {
+            return ModRegistry.WASTE_EARTH.get().defaultBlockState();
         }
         if (isStone(state) && random.nextDouble() < 0.2D + severity * 0.6D) {
-            return ModRegistry.ASH_BLOCK.get().defaultBlockState();
+            return null;
         }
         return null;
     }
@@ -484,10 +484,13 @@ public final class NuclearAftermath {
         if (state.isAir() || state.is(Blocks.BEDROCK)) {
             return null;
         }
-        if (state.is(Blocks.SAND) || state.is(Blocks.RED_SAND) || state.is(Blocks.GLASS) || isEarth(state) || isStone(state)) {
-            return ModRegistry.ASH_BLOCK.get().defaultBlockState();
+        if (state.is(Blocks.SAND) || state.is(Blocks.RED_SAND) || state.is(Blocks.GLASS) || isStone(state)) {
+            return null;
         }
-        return random.nextDouble() < severity * 0.18D ? ModRegistry.ASH_BLOCK.get().defaultBlockState() : null;
+        if (isEarth(state)) {
+            return ModRegistry.WASTE_EARTH.get().defaultBlockState();
+        }
+        return null;
     }
 
     private static BlockState organicAftermathState(BlockState state) {

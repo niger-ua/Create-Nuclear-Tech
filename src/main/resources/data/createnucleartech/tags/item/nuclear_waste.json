@@ -1,6 +1,14 @@
 {
   "replace": false,
   "values": [
+    "createnucleartech:spent_fuel_rod",
+    "createnucleartech:spent_natural_uranium_fuel_rod",
+    "createnucleartech:spent_enriched_uranium_fuel_rod",
+    "createnucleartech:spent_military_uranium_fuel_rod",
+    "createnucleartech:spent_mox_fuel_rod",
+    "createnucleartech:spent_plutonium_fuel_rod",
+    "createnucleartech:spent_reactor_plutonium_fuel_rod",
+    "createnucleartech:spent_thorium_fuel_rod",
     "createnucleartech:plutonium_240_ingot",
     "createnucleartech:cobalt_60_source",
     "createnucleartech:iridium_192_source",

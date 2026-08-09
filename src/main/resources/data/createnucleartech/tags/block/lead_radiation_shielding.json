@@ -16,6 +16,10 @@
     {
       "id": "createnucleartech:lead_irradiation_box",
       "required": false
+    },
+    {
+      "id": "createnucleartech:lead_copycat",
+      "required": false
     }
   ]
 }
